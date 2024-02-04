@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Letter Animation</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .letter-container {
+      position: relative;
+      width: 800px;
+      height: 700px;
+      background-color: #fff;
+      border: 2px solid #ff66b2;
+      overflow: hidden;
+      animation: openLetter 2s forwards;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter-inner {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .letter-pic {
+      max-width: 50%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    .love-button {
+      margin-top: 20px;
+      background-color: #ff66b2;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .love-button:hover {
+      background-color: #e64d98;
+    }
+
+    @keyframes openLetter {
+      0% {
+        width: 400px;
+        height: 200px;
+      }
+      50% {
+        width: 400px;
+        height: 500px;
+      }
+      100% {
+        width: 800px;
+        height: 700px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="letter-container">
+    <div class="letter-inner">
+      <p>Hey Abhra,</p>
+      I hope this message finds you well. I wanted to share something special with you.As I sit down to express my feelings, words seem to fall short in capturing the depth of my love for you. You are the melody that plays in my heart, the sunshine that brightens my darkest days, and the anchor that grounds me in a sea of emotions.
+      Every moment with you is a cherished memory, and every day with you feels like a beautiful journey. Your smile has the power to light up my world, and your presence brings a warmth that no other can replicate.
+      In your embrace, I find solace, in your laughter, I find joy, and in your love, I find my home. You've become not just my partner but also my confidant, my supporter, and my greatest source of strength.
+      Thank you for being the amazing person you are and for sharing this incredible journey of love with me. With you, every day is an adventure, and every challenge becomes an opportunity to grow together.
+      I love you more than words can convey, and my heart belongs to you completely. Here's to us and the beautiful love we share—may our days be filled with laughter, our nights with sweet dreams, and our future with endless possibilities
+      <p>With love,</p>
+      <p>Devi</p>
+      <img class="letter-pic" src="C:\Users\DELL\Pictures\go back couple\abc\pictures\us.jpg" alt="center">
+      <button class="love-button" onclick="goToLovePage()">Go Back to Love Page</button>
+    </div>
+  </div>
+
+  <script>
+    function goToLovePage() {
+      window.location.href = 'love.html';
+    }
+  </script>
+</body>
+</html>

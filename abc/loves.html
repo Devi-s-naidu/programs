@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Love Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="love-container">
+      <h1>Love</h1>
+      <p>Thanks for choosing Love</p>
+      <!-- Add content specific to the "Love" page here -->
+
+      <div class="question-container">
+        <p>Do you love me?</p>
+        <button onclick="redirectToYesPage()">Yes</button>
+        <button onclick="showNoMessage()">No</button>
+      </div>
+    </div>
+
+    <script>
+      function redirectToYesPage() {
+        window.location.href = 'yes.html'; // Replace 'yes.html' with the actual page you want to redirect to for "Yes"
+      }
+
+      function showNoMessage() {
+        alert("Sorry, I did not know you don't feel the same.");
+      }
+    </script>
+  </body>
+</html>

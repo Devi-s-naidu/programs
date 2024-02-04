@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Love Story Simulation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="love-container">
+      <h1>Flashback</h1>
+      <div id="chat-messages">
+        <p id="message">Follow Devi on Instagram?</p>
+      </div>
+      <div class="interaction-buttons">
+        <button onclick="handleInteraction()">Next</button>
+      </div>
+    </div>
+
+    <!-- Add the provided script here -->
+    <script>
+      var isFollowRequested = false;
+      var isFollowAccepted = false;
+      var interactionPhase = 0;
+
+      function handleInteraction() {
+        switch (interactionPhase) {
+          case 0:
+            showMessage("You decided to follow Devi on Instagram.");
+            isFollowRequested = true;
+            break;
+          case 1:
+            showMessage("After 6 months, Devi accepted your follow request!");
+            isFollowAccepted = true;
+            showMessage("Devi has requested to follow you back");
+            break;
+          case 2:
+            simulateChatInteraction();
+            break;
+          case 3:
+            simulateCallsAndTexts();
+            break;
+          case 4:
+            showMessage("Devi: So, what are we now?");
+            showMessage("You: umm, just like how we are?");
+            showMessage("Devi: Dumbass, let's be gf and bf!!");
+            break;
+          case 5:
+            redirectToLetterPage();
+            break;
+        }
+
+        interactionPhase++;
+      }
+
+      function simulateChatInteraction() {
+        showMessage("You: Happy New Year! 🎉");
+        showMessage("Devi: Same to you! 🥳");
+        showMessage("January - May: Regular chats...");
+        showMessage("May 30: Time for calls and texts!");
+      }
+
+      function simulateCallsAndTexts() {
+        showMessage("June 1 - June 29: Lots of calls and texts...");
+        showMessage("Beautiful bonding...");
+        showMessage("June 30: Confession day! You expressed your feelings to each other.");
+      }
+      function redirectToLetterPage() {
+        window.location.href = 'letter.html'; // Replace 'yes.html' with the actual page you want to redirect to for "Yes"
+      }
+
+
+
+      function showMessage(message) {
+        var chatMessages = document.getElementById('chat-messages');
+        var newMessage = document.createElement('p');
+        newMessage.innerHTML = message;
+        chatMessages.appendChild(newMessage);
+      }
+    </script>
+  </body>
+</html>

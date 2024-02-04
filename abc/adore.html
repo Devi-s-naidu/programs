@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image and Chat Bubble</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .pic {
+      max-width: 65%; /* Adjusted size to make it smaller */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    .interaction-container {
+      text-align: center;
+      margin-top: 20px; /* Adjusted margin */
+    }
+
+    .chat-bubble {
+      background-color: #e779ae; /* Yellow background for the chat bubble */
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .interaction-buttons button {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .heart-animation {
+      display: inline-block;
+      animation: heartbeat 1s infinite;
+      color: red;
+    }
+
+    .broken-heart-animation {
+      display: inline-block;
+      animation: breakheart 1s ease-out forwards;
+      color: blue;
+    }
+
+    .draw-heart-animation {
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .draw-heart-animation::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border: 2px solid red;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      animation: drawHeart 2s ease-out forwards;
+    }
+
+    .image-text-container {
+      display: block;
+      align-items: center;
+      gap: 10px; /* Adjusted gap between image and text */
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes drawHeart {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes breakheart {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img class="pic" src="C:\Users\DELL\Pictures\go back couple\abc\pictures\specsgirl.jpg" alt="Your Image">
+  </div>
+  <div class="interaction-container">
+    <div id="chat-messages" class="chat-bubble">
+      <p>Hello there! Your chashmish girl wants you to know that she adores you way too much and wants you to be her valentine forever. Would you like to say yes?</p>
+    </div>
+
+    <div class="interaction-buttons">
+      <button onclick="showLoveMessage('Yayyyyyy!!! I <span class=\'draw-heart-animation\'></span> <span class=\'heart-animation\'>Love you </span> so much <div class=\'image-text-container\'><img class=\'pic\' src=\'C:/Users/DELL/Pictures/go back couple/abc/pictures/heartgirl.png\'></div>')">Yes</button>
+      <button onclick="showLoveMessage('<span class=\'broken-heart-animation\'>Oops! </span> I guess you do not love me. No worries, I will work hard to win your heart <img class=\'pic\' src=\'C:/Users/DELL/Pictures/go back couple/abc/pictures/sad.jpg\'>')">No</button>
+    </div>
+    <div class="chat-messages">
+      <button onclick="backpage()">Back</button>
+    </div>
+  </div>
+
+  <script>
+    function backpage() {
+      window.location.href = 'love.html'; // Replace 'yes.html' with the actual page you want to redirect to for "Yes"
+    }
+
+    function showLoveMessage(message) {
+      var chatMessages = document.getElementById('chat-messages');
+      var newMessage = document.createElement('p');
+      newMessage.innerHTML = message;
+      chatMessages.innerHTML = ''; // Clear existing messages
+      chatMessages.appendChild(newMessage);
+    }
+  </script>
+</body>
+</html>

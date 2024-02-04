@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Love Loader</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Add this style for the password input box */
+      #password-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFDAB9; /* Peach shade */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      #password {
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #E9967A; /* Lighter peach shade for border */
+        border-radius: 5px;
+      }
+
+      #submit-btn {
+        background-color: #E9967A; /* Lighter peach shade for button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <canvas width="480px" height="480px" id="loader"></canvas>
+      <h1>Hey Baby Boo</h1>
+
+      <!-- Add this inside the body tag, below the loader -->
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+  
+
+      
+    </div>
+    <script src="script.js"></script>
+    <script>
+      function checkPassword() {
+        var password = document.getElementById('password').value;
+
+        // Replace 'Abhrajit' with the actual password
+        if (password === 'Abhrajit') {
+          // Redirect to the next love confession page
+          window.location.href = 'love.html';
+        } else {
+          // Display an error message or take appropriate action
+          alert('Incorrect password. Try again!');
+        }
+      }
+    </script>
+  </body>
+</html>

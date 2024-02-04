@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      margin: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .description {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    <!-- Image 1 -->
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\metext.jpeg" alt="Image 1">
+      <div class="description">
+        <p>Description for Image 1.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\beach.jpeg" alt="Image 1">
+      <div class="description">
+        <p>Description for Image 1.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\phone.jpeg" alt="Image 1">
+      <div class="description">
+        <p>Description for Image 1.</p>
+      </div>
+    </div>
+
+    <!-- Image 2 -->
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\marriage.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\cooking.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\laundry.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\massage.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\fights.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\anger.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\rain.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\snow.jpeg" alt="Image 2">
+      <div class="description">
+        <p>Description for Image 2.</p>
+      </div>
+    </div>
+
+    <!-- Repeat the pattern for more images -->
+    <!-- ... -->
+
+    <!-- Image 10 -->
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\nighttalks.jpeg" alt="Image 10">
+      <div class="description">
+        <p>Description for Image 10.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\travel.jpeg" alt="Image 10">
+      <div class="description">
+        <p>Description for Image 10.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\kids.jpeg" alt="Image 10">
+      <div class="description">
+        <p>Description for Image 10.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:\Users\DELL\Pictures\go back couple\abc\pictures\old1.jpeg" alt="Image 10">
+      <div class="description">
+        <p>Description for Image 10.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="interaction-buttons">
+    <button onclick="showLoveMessage('FInally', 'wishes.html')">Next</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
